@@ -11,10 +11,10 @@ const server = http.createServer(app);
 const io = socketIO(server);
 
 io.on('connection', (socket) => {
-    console.log('new USER connected');
+    console.log(`A new client connected. id = ${socket.id}`);
 
     socket.on('disconnect', () => {
-        console.log('USER disconnected');
+		console.log(`A client disconnected. id = ${socket.id}`);
     })
 });
 
