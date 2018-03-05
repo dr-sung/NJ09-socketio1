@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Socket IO demo</title>
+    </head>
+    <body>
+        <h1>Hello World! Socket IO Demo</h1>
+
+        <script src="/socket.io/socket.io.js"> </script>
+        <script>
+            const socket = io();
+            socket.on('connect', () => {
+                console.log('connected to SERVER');
+            });
+
+            socket.on('disconnect', () => {
+                console.log('disconnected from SERVER')
+            });
+        </script>
+    </body>
+</html>
